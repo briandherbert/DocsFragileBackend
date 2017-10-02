@@ -1,4 +1,7 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.briandherbert'
 
 android {
     compileSdkVersion 26
@@ -31,5 +34,4 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
 }
