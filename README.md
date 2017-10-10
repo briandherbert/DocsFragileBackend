@@ -5,6 +5,29 @@ Duct tape backend
 
 DocsFragileBackend is a quick-and-dirty way to supply your Android app with dynamic data, backed by a Google spreadsheet.
 
+Add it to your app's build.gradle file:
+
+```
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    compile 'com.github.briandherbert:DocsFragileBackend:v0.3'
+}
+```
+and call 
+
+```
+DuctTapeBackend.downloadGoogleSpreadsheetData(String key, DuctTapeBackend.DownloadGoogleSpreadsheetDataListener listener)
+```
+
+where ***key*** is the unique key in the doc's url, something like ***18JyepUBU2-QAF4agQo7BI25fe5gARfxBr5AvBHFkgpg***. 
+YOU MUST MAKE THE DOC PUBLICLY VISIBLE IN SHARING SETTINGS.
+
+
 Demo
 -----------
 
@@ -17,7 +40,7 @@ The loop makes it a little hard to folllow, but we start with "Fatty Special", t
 The backend doc used in WhatIHadForBreafast is:
 https://docs.google.com/spreadsheets/d/18JyepUBU2-QAF4agQo7BI25fe5gARfxBr5AvBHFkgpg/edit#gid=0
 
-Other thoughts
+Thoughts
 -----------
 
 The http call made to get the CSV data can change at Google's whim, and this will break if it does. Also, sometimes it takes a couple seconds for Google Docs to respond with the data. And I've seen some existing docs return xlxs data, even when requesting csv. So use caution; this is duct tape. If you don't mind that possible fragility, here are some other possible uses:
