@@ -1,8 +1,4 @@
 # DocsFragileBackend
-Duct tape backend
-
-=========
-
 DocsFragileBackend is a quick-and-dirty way to supply your Android app with dynamic data, backed by a Google spreadsheet.
 
 Add it to your app's build.gradle file:
