@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.burningaltar.ducttapebackend.DuctTapeBackend;
+
 /**
  * Created by bherbert on 9/29/17.
  */
