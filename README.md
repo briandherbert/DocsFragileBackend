@@ -32,10 +32,10 @@ In the callback, you can use a provided utility to parse the returned CSV doc da
 
 ```    
 @Override
-    public void onSpreadsheetDataLoaded(String csv) {
-        try {
-            Log.v(TAG, "Got spreadsheet data");
-            String[][] rowsCols = DuctTapeBackend.parseCsvToRowColData(csv);
-        }
+public void onSpreadsheetDataLoaded(String csv) {
+    try {
+        Log.v(TAG, "Got spreadsheet data");
+        String[][] rowsCols = DuctTapeBackend.parseCsvToRowColData(csv);
     }
+}
 ```
