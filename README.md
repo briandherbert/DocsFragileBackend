@@ -36,6 +36,7 @@ public void onSpreadsheetDataLoaded(String csv) {
     try {
         Log.v(TAG, "Got spreadsheet data");
         String[][] rowsCols = DuctTapeBackend.parseCsvToRowColData(csv);
+    } catch (Exception e) {
     }
 }
 ```
